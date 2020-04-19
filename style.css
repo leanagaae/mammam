@@ -1,0 +1,347 @@
+
+@font-face {
+  font-family: 'Noteworthy Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Noteworthy Light'), url('Noteworthy-Lt.woff') format('woff');
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+/* HEADER */
+
+body{
+  background-color: none repeat scrool 0 0;
+  font-size: 400;
+  line-height: 1.5em;
+}
+
+.inner_main_menu{
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.inner_main_menu ul{
+  margin: 0;
+  padding: 80px 0 0;
+  list-style: none;
+  text-align: right;
+}
+.inner_main_menu ul li{
+  float: none;
+  display: inline-block;
+}
+
+.inner_main_menu ul li:nth-child(1){
+  float: left;
+  margin-left: 80px;
+}
+.inner_main_menu ul li:nth-child(2){
+  float: left;
+  margin-left: 90px;
+}
+
+.inner_main_menu ul li a{
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-family: 'Noteworthy Light';
+
+}
+
+
+.inner_main_menu ul li a:hover{
+  border: 2px solid #d24c2b;
+
+}
+
+#main_menu{
+  width: 100%;
+  position: relative;
+}
+
+.logo_area{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top:0;
+  content: "";
+  margin-left: -100px;
+}
+
+
+
+.inner_main_menu ul li:nth-child(3){
+  float: left;
+  margin-left: 260px;
+}
+
+
+.inner_main_menu ul li:nth-child(4){
+  float: left;
+  margin-left: 90px;
+}
+
+
+#menu{
+  background-color: #fdfaf4;
+  height: 240px;
+}
+
+/* FOOTER */
+
+#footer{
+  background-color: #4f9aaf;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#footer li a {
+  color: white;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: 'Noteworthy Light';
+}
+
+#footer h5{
+  font-size: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+/* BAN 1 */
+
+#ban1{
+  background-image: url(image/fond3.png);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#ban1 h1{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-family: 'Noteworthy Light';
+
+}
+
+
+
+/* CORPS DE LA PAGE */
+
+#corps1 h1{
+  font-family: 'Noteworthy Light';
+  font-size: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* MEILLEUR RECETTES */
+
+#corps1 article h1{
+  font-family: 'Noteworthy Light';
+  font-size: 20px;
+  text-transform: center;
+  margin-left: 130px;
+}
+
+#corps1 article p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: center;
+  text-justify: auto;
+}
+
+#corps1 article .btn{
+  background-color: #fff;
+  border: 1px solid #d24c2b;
+  margin-left: 200px;
+}
+
+#corps1 article .btn:hover{
+  color: blue;
+  background-color: #fff;
+  border: 1px solid #d24c2b;
+  margin-left: 200px;
+}
+
+#trait_dessus {
+  border-top: 1px solid #000;
+  width : 300px;
+  margin-left: 100px;
+  margin-top: -20px;
+
+}
+
+
+/* MASQUE */
+
+#masque article h1{
+  margin-left: 160px;
+}
+
+#masque{
+  padding-top: 20px;
+}
+
+/* PEINTURE */
+
+#peinture{
+  padding-top: 20px;
+}
+
+
+
+/* CAROUSSEL */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Show 4th slide on md if col-md-4*/
+  .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.3333%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Show 3rd slide on sm if col-sm-6*/
+  .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -50%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+}
+@media (min-width: 576px) {
+  .carousel-item {
+      margin-right: 0;
+  }
+  /* show 2 items */
+  .carousel-inner .active + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* farthest right hidden item must be also positioned for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+/* MD */
+@media (min-width: 768px) {
+  /* show 3rd of 3 item slide */
+  .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+/* LG */
+@media (min-width: 991px) {
+  /* show 4th item */
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  /* Show 5th slide on lg if col-lg-3 */
+  .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -25%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction //t - previous slide direction last item animation fix */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+
+#caroussel{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
+#caroussel h5{
+  text-align: center;
+  font-family: 'Noteworthy Light';
+  border: 1px solid #d24c2b;
+  border-radius: 3px;
+}
+
+/* OMBRE :   box-shadow: 6px 6px 6px black; 
+*/
